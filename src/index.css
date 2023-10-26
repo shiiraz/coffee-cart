@@ -1,0 +1,31 @@
+:root {
+  --purple: rgb(83, 44, 255);
+  --black: rgb(0, 0, 0);
+  --orange: rgb(255, 165, 0);
+}
+
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.active {
+  text-decoration: dashed underline;
+  color: var(--orange);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-bottom: 4px solid var(--black);
+  font-size: 1.5rem;
+}
+
+nav a {
+  padding: 10px;
+  color: var(--black);
+  text-decoration: none;
+}

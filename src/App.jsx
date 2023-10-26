@@ -1,8 +1,19 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import SharedLayout from "./SharedLayout";
+import Menu from "./Pages/Menu";
+import Cart from "./Pages/Cart";
+
 function App() {
   return (
-    <>
-      <h1>Coffee Cart</h1>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<SharedLayout />}>
+          <Route index element={<Menu />} />
+          <Route path="cart" element={<Cart />} />
+          <Route path="*" element={<div>Not Found</div>} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
