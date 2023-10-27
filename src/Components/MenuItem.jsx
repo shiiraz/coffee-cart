@@ -1,20 +1,29 @@
-import PropTypes from "prop-types";
+import { PropTypes } from "prop-types";
 import useGlobalContext from "../globalContext";
 
-function MenuItem({ title, price }) {
+function MenuItem({ item }) {
   const { handleTotal } = useGlobalContext();
+
   return (
     <div className="coffee-card">
-      <h3>{title}</h3>
-      <p>Price: ${price}</p>
-      <button onClick={() => handleTotal(price)}>Add to cart</button>
+      <h3>{item.title}</h3>
+      <p>Price: ${item.price}</p>
+      <button
+        onClick={() => {
+          handleTotal(item.price);
+        }}
+      >
+        Add to cart
+      </button>
     </div>
   );
 }
 
 MenuItem.propTypes = {
-  title: PropTypes.string.isRequired,
-  price: PropTypes.number.isRequired,
+  item: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+  }).isRequired,
 };
 
 export default MenuItem;

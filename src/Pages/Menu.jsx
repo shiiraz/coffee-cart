@@ -7,8 +7,7 @@ function Menu() {
     <>
       <div className="container">
         {menuItems.map((item) => {
-          const { id, title, price } = item;
-          return <MenuItem key={id} title={title} price={price} />;
+          return <MenuItem key={item.id} item={item} />;
         })}
       </div>
       <span>Total: ${total}</span>
