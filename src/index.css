@@ -97,6 +97,10 @@ span {
   .coffee-card {
     width: calc(33.3% - 20px);
   }
+
+  table {
+    font-size: 1.5rem;
+  }
 }
 
 body {
@@ -107,8 +111,8 @@ body {
 table {
   border-collapse: collapse;
   margin-top: 20px;
-  margin: 2rem auto;
-  font-size: 1.5rem;
+  margin: 2rem auto 6rem auto;
+  /* font-size: 1.5rem; */
 }
 
 th,
