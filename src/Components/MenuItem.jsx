@@ -2,7 +2,17 @@ import { PropTypes } from "prop-types";
 import useGlobalContext from "../globalContext";
 
 function MenuItem({ item }) {
-  const { handleTotal } = useGlobalContext();
+  const { sumTotal, cart, setCart, sumQuantity } = useGlobalContext();
+  function addToCart(cart) {
+    if (cart.some((x) => x.title === item.title)) {
+      const updatedCart = cart.map((x) =>
+        x.id == item.id ? { ...x, quantity: x.quantity + 1 } : x
+      );
+      setCart(updatedCart);
+    } else {
+      setCart([...cart, { ...item, quantity: 1 }]);
+    }
+  }
 
   return (
     <div className="coffee-card">
@@ -10,7 +20,9 @@ function MenuItem({ item }) {
       <p>Price: ${item.price}</p>
       <button
         onClick={() => {
-          handleTotal(item.price);
+          addToCart(cart);
+          sumQuantity();
+          sumTotal();
         }}
       >
         Add to cart
@@ -21,6 +33,7 @@ function MenuItem({ item }) {
 
 MenuItem.propTypes = {
   item: PropTypes.shape({
+    id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
   }).isRequired,

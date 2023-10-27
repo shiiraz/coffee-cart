@@ -1,7 +1,7 @@
 :root {
-  --purple: #532cff;
   --black: #000000;
-  --orange: #ffa500;
+  /* --orange: #ffa500; */
+  --coffee-brown: rgb(66, 42, 25);
 }
 
 
@@ -12,7 +12,7 @@
 
 .active {
   text-decoration: dotted underline;
-  color: var(--orange);
+  color: var(--coffee-brown);
 }
 
 nav {
@@ -20,7 +20,7 @@ nav {
   justify-content: center;
   align-items: center;
   color: #fff;
-  border-bottom: 4px solid var(--black);
+  border-bottom: 4px solid var(--coffee-brown);
   font-size: 1.5rem;
 }
 
@@ -35,7 +35,7 @@ nav a {
   flex-wrap: wrap;
   justify-content: center;
   max-width: 1000px;
-  margin: 3rem auto;
+  margin: 2rem auto 6rem auto;
   gap: 20px;
   /* Add gap property to create spaces between the cards */
 }
@@ -60,7 +60,7 @@ nav a {
   padding: .5rem .75rem;
   border: none;
   border-radius: 5px;
-  background-color: #3a3a3a;
+  background-color: var(--coffee-brown);
   color: #fff;
   font-size: 1rem;
   cursor: pointer;
@@ -76,9 +76,10 @@ span {
   bottom: 1rem;
   right: 1rem;
   padding: 1rem;
-  background-color: var(--orange);
+  background-color: var(--coffee-brown);
   border: 1px solid var(--black);
   font-size: 2rem;
+  color: #fff
 }
 
 
@@ -97,4 +98,49 @@ span {
 
 body {
   background-color: #f8e2d4;
+}
+
+
+table {
+  border-collapse: collapse;
+  margin-top: 20px;
+  margin: 2rem auto;
+  font-size: 1.5rem;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 12px;
+}
+
+
+thead {
+  background-color: var(--coffee-brown);
+  color: white;
+  font-size: 1rem;
+}
+
+thead>tr th {
+  border: 1px solid var(--coffee-brown);
+}
+
+.t-rows {
+  border-bottom: 4px dashed var(--coffee-brown);
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+td button {
+  padding: .5rem .5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--coffee-brown);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 0 5px;
 }

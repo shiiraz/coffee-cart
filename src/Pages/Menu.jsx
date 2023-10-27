@@ -1,8 +1,13 @@
 import MenuItem from "../Components/MenuItem";
 import useGlobalContext from "../globalContext";
+import { useEffect } from "react";
 
 function Menu() {
-  const { menuItems, total } = useGlobalContext();
+  const { menuItems, total, sumTotal, sumQuantity } = useGlobalContext();
+  useEffect(() => {
+    sumTotal();
+    sumQuantity();
+  }, [sumTotal, sumQuantity]);
   return (
     <>
       <div className="container">
