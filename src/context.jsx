@@ -37,6 +37,10 @@ function AppContext({ children }) {
     setQuantity(quantity);
   }
 
+  function deleteItem(id) {
+    setCart(cart.filter((item) => item.id !== id));
+  }
+
   return (
     <GlobalContext.Provider
       value={{
@@ -50,6 +54,7 @@ function AppContext({ children }) {
         sumTotal,
         quantity,
         sumQuantity,
+        deleteItem,
       }}
     >
       {children}

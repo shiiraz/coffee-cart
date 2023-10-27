@@ -1,7 +1,10 @@
 :root {
   --black: #000000;
   /* --orange: #ffa500; */
-  --coffee-brown: rgb(66, 42, 25);
+  --coffee-brown: #422a19;
+  --pink: #fdc4c4;
+  --white: #ffffff;
+  --body-brown: #f8e2d4;
 }
 
 
@@ -19,7 +22,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: var(--white);
   border-bottom: 4px solid var(--coffee-brown);
   font-size: 1.5rem;
 }
@@ -61,7 +64,7 @@ nav a {
   border: none;
   border-radius: 5px;
   background-color: var(--coffee-brown);
-  color: #fff;
+  color: var(--white);
   font-size: 1rem;
   cursor: pointer;
 }
@@ -79,7 +82,7 @@ span {
   background-color: var(--coffee-brown);
   border: 1px solid var(--black);
   font-size: 2rem;
-  color: #fff
+  color: var(--white)
 }
 
 
@@ -97,7 +100,7 @@ span {
 }
 
 body {
-  background-color: #f8e2d4;
+  background-color: var(--body-brown);
 }
 
 
@@ -117,7 +120,7 @@ td {
 
 thead {
   background-color: var(--coffee-brown);
-  color: white;
+  color: var(--white);
   font-size: 1rem;
 }
 
@@ -134,13 +137,23 @@ h1 {
   margin-top: 20px;
 }
 
-td button {
+.toggle-btn {
   padding: .5rem .5rem;
   border: none;
   border-radius: 5px;
   background-color: var(--coffee-brown);
-  color: #fff;
+  color: var(--white);
   font-size: 1rem;
   cursor: pointer;
   margin: 0 5px;
+}
+
+.delete-btn {
+  background-color: var(--pink);
+  border-radius: 50%;
+  color: red;
+  border: none;
+  padding: 0rem .5rem;
+  font-size: 2rem;
+  cursor: pointer;
 }

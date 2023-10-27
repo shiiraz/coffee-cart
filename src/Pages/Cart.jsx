@@ -3,7 +3,7 @@ import CartItem from "../Components/CartItem";
 import { useEffect } from "react";
 
 function Cart() {
-  const { cart, increase, decrease, sumQuantity, total, sumTotal } =
+  const { cart, increase, decrease, sumQuantity, total, sumTotal, deleteItem } =
     useGlobalContext();
   useEffect(() => {
     sumQuantity();
@@ -20,6 +20,7 @@ function Cart() {
                 <th>Price x Quantity</th>
                 <th></th>
                 <th>Total</th>
+                <th></th>
               </tr>
             </thead>
             <tbody>
@@ -29,6 +30,7 @@ function Cart() {
                   item={item}
                   increase={increase}
                   decrease={decrease}
+                  deleteItem={deleteItem}
                 />
               ))}
             </tbody>
