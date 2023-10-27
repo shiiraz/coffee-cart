@@ -1,13 +1,11 @@
 import MenuItem from "../Components/MenuItem";
+import TotalDisplay from "../Components/TotalDisplay";
 import useGlobalContext from "../globalContext";
-import { useEffect } from "react";
+import { useGlobalEffects } from "../hooks/useGlobalEffects";
 
 function Menu() {
   const { menuItems, total, sumTotal, sumQuantity } = useGlobalContext();
-  useEffect(() => {
-    sumTotal();
-    sumQuantity();
-  }, [sumTotal, sumQuantity]);
+  useGlobalEffects(sumTotal, sumQuantity);
   return (
     <>
       <div className="container">
@@ -15,7 +13,7 @@ function Menu() {
           return <MenuItem key={item.id} item={item} />;
         })}
       </div>
-      <span>Total: ${total}</span>
+      <TotalDisplay total={total} />
     </>
   );
 }

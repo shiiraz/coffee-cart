@@ -1,14 +1,12 @@
 import useGlobalContext from "../globalContext";
 import CartItem from "../Components/CartItem";
-import { useEffect } from "react";
+import { useGlobalEffects } from "../hooks/useGlobalEffects";
+import TotalDisplay from "../Components/TotalDisplay";  
 
 function Cart() {
   const { cart, increase, decrease, sumQuantity, total, sumTotal, deleteItem } =
     useGlobalContext();
-  useEffect(() => {
-    sumQuantity();
-    sumTotal();
-  }, [sumQuantity, sumTotal]);
+  useGlobalEffects(sumTotal, sumQuantity);
   return (
     <div>
       {cart && cart.length > 0 ? (
@@ -36,7 +34,7 @@ function Cart() {
             </tbody>
           </table>
 
-          <span>Total: ${total}</span>
+          <TotalDisplay total={total} />
         </div>
       ) : (
         <h1>Cart empty, please add some coffee :)</h1>
