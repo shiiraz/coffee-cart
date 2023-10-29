@@ -8,6 +8,7 @@ A simple React application for managing a coffee shop, allowing users to view a 
 - [Installation](#installation)
 - [Usage](#usage)
 - [Features](#features)
+- [Live Demo](#live-demo)
   
 
 ## Description
@@ -33,3 +34,7 @@ Once the development server is running, you can access the Coffee Cart App in yo
 - Add items to the cart
 - Increase, decrease, or delete items in the cart
 - Display the total price of items in the cart
+
+## Live Demo
+
+Explore the live version of the Coffee Cart App: [Coffee Cart App Live](https://koffee-cart.netlify.app/)
