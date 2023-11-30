@@ -13,7 +13,7 @@ A simple React application for managing a coffee shop, allowing users to view a 
 
 ## Description
 
-The Coffee Cart App is a basic application built with React and Vite that enables users to view a menu of coffee items, add them to a cart, and manage the contents of the cart. It utilizes the Context API for global state management and React Router for navigation between the menu and cart pages.
+The Coffee Cart App is a basic application built with React and Vite that enables users to view a menu of coffee items, add them to a cart, and manage the contents of the cart. It utilizes the `Context API` for global state management and `React Router` for navigation between the menu and cart pages.
 
 ## Installation
 
